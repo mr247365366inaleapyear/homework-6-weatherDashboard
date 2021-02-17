@@ -44,6 +44,9 @@ function currentWeather() {
       break;
     }
   }
+
+  $("#namecity").text(cityName)
+  $("#tempcity").text($currentTemp);
   //console.log(currentWeather);
   console.log(fiveDayForcast);
 };
