@@ -32,21 +32,40 @@ if(mm<10)
     mm='0'+mm;
 } 
 today = mm+'-'+dd+'-'+yyyy;
-console.log(oneDay);
+//console.log(oneDay);
 
-function currentWeather() {
+function getItems() {
   var city = JSON.parse(localStorage.getItem("search"));
   if (city == null) {
     search = city;
   };
   for (i = 0, i < search.length; i++;) {
-    if (i == 8) {
+    if (i == 10) {
       break;
     }
+    
   }
+  var city;
+  getItems();
 
-  $("#namecity").text(cityName)
-  $("#tempcity").text($currentTemp);
+  //$("#namecity").text(cityName)
+  //$("#tempcity").text($currentTemp);
   //console.log(currentWeather);
+  /*function fiveDayForcast(city) {
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + city + "&units=imperial";
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function (response) {
+      var newrow = $("<div>").attr("class", "forecast");
+      $("#earthforecast").append(newrow);
+
+      for (var i = 0; i < response.list.length; i++) {
+        if (response.list[i]) {
+          var newCol =
+        };
+      };
+    })
+  }*/
   console.log(fiveDayForcast);
 };
