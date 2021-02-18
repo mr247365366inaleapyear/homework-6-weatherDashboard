@@ -38,17 +38,7 @@ function getItems() {
   getItems();
 
 
-  console.log(fiveDayForcast);
+  console.log(city);
 
-  $("#searchbtn").on("click", function () {
-    event.preventDefault();
-    var loc = $("#searchinput").val().trim();
-    if (loc !== "") {
-        clear();
-        currentLoc = loc;
-        saveLoc(loc);
-        $("#searchinput").val("");
-        getCurrent(loc);
-    }
-});
+  
 
