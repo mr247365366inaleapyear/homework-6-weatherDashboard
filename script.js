@@ -1,38 +1,27 @@
 var city = $("#searchTerm").val();
 var apiKey = "&appid=48a5cb92f8bcd3cfcc83073fb0090b83";
 
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1; 
-var yyyy = today.getFullYear();
+For (i=0; i < 4; i++ ) {
 
-if(dd<10) 
-{
-    dd='0'+dd;
-} 
+  var today = new Date();
+  var dd = today.getDate()+1;
+  var mm = today.getMonth()+1; 
+  var yyyy = today.getFullYear();
 
-if(mm<10) 
-{
-    mm='0'+mm;
-} 
+    if(dd<10) {
+            
+    dd='0'+dd;} 
+              
+
+    if(mm<10) {
+
+    mm='0'+mm;}
+ 
 today = mm+'-'+dd+'-'+yyyy;
+};
 console.log(today);
 
-var oneDay = new Date;
-var oneDD = oneDay.getDate()+1;
-var mm = oneDay.getMonth()+1; 
-var yyyy = oneDay.getFullYear();
-if(oneDD<10) 
-{
-    oneDD='0'+oneDD;
-} 
 
-if(mm<10) 
-{
-    mm='0'+mm;
-} 
-today = mm+'-'+dd+'-'+yyyy;
-//console.log(oneDay);
 
 function getItems() {
   var city = JSON.parse(localStorage.getItem("search"));
@@ -48,24 +37,18 @@ function getItems() {
   var city;
   getItems();
 
-  //$("#namecity").text(cityName)
-  //$("#tempcity").text($currentTemp);
-  //console.log(currentWeather);
-  /*function fiveDayForcast(city) {
-    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + city + "&units=imperial";
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function (response) {
-      var newrow = $("<div>").attr("class", "forecast");
-      $("#earthforecast").append(newrow);
 
-      for (var i = 0; i < response.list.length; i++) {
-        if (response.list[i]) {
-          var newCol =
-        };
-      };
-    })
-  }*/
   console.log(fiveDayForcast);
-};
+
+  $("#searchbtn").on("click", function () {
+    event.preventDefault();
+    var loc = $("#searchinput").val().trim();
+    if (loc !== "") {
+        clear();
+        currentLoc = loc;
+        saveLoc(loc);
+        $("#searchinput").val("");
+        getCurrent(loc);
+    }
+});
+
