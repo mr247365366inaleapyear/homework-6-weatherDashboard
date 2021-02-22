@@ -1,7 +1,41 @@
 body {
     background-color: #eaece6;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 10px;
     line-height: 1.5;
 }
+header{
+    font-size: 250%;
+    background-color: rgb(112, 136, 143);
+    font-style: bold;
+    color: rgb(68, 65, 65);
+    text-align: center;
+    margin: 1%;
+    padding: 1%;
+}
 
+.card{
+    width: 0%;
+    height: 0%;
+    justify-content: center;
+}
+ul {
+    list-style-type: lower-alpha;
+  }
+.container{
+    display: flex;
+   justify-content: flex-start;
+
+}
+
+#results-container{
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+#five-day{
+justify-content: first baseline;
+text-align: center;
+font-size: smaller;
+font-family: 'Times New Roman', Times, serif;
+}
