@@ -95,9 +95,7 @@ function getWeather(cityName) {
       var results = 0;
       previousdate = moment().format("MM/DD");
       for (let index = 0; index < response.list.length; index++) {
-        var currentDate = moment(response.list[index].dt, "X").format(
-          "MM/DD"
-        );
+        var currentDate = moment(response.list[index].dt, "X").format("MM/DD");
         var temp = response.list[index].main.temp;
         temp = (temp - 273.15) * 1.8 + 32;
         temp = Math.floor(temp);
